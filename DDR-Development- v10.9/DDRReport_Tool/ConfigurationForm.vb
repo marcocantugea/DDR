@@ -1,6 +1,6 @@
 ﻿Imports DDRReportToolCore
 Public Class ConfigurationForm
-
+    'This is comment test
     Dim connectionstring As String
     Dim newconnectionstring As String = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source="
     Dim appconfig As New DDRReportToolCore.com.configuration.extras.AppConfigFileSettings
