@@ -757,7 +757,7 @@ Namespace com.file
 
                         'se agrega que solo que agarre los dos ultimos.
                         Dim bitstoprint As New List(Of entities.BITS)
-
+                        'Seleciona los dos ultimos objetos de la coleccion
                         bitstoprint.Add(DDR.DDRReport.BITS.Items(DDR.DDRReport.BITS.Items.Count - 2))
                         bitstoprint.Add(DDR.DDRReport.BITS.Items(DDR.DDRReport.BITS.Items.Count - 1))
 
