@@ -754,8 +754,18 @@ Namespace com.file
 
                     'save bits
                     If Not IsNothing(DDR.DDRReport.BITS) Then
+
+                        'se agrega que solo que agarre los dos ultimos.
+                        Dim bitstoprint As New List(Of entities.BITS)
+
+                        bitstoprint.Add(DDR.DDRReport.BITS.Items(DDR.DDRReport.BITS.Items.Count - 2))
+                        bitstoprint.Add(DDR.DDRReport.BITS.Items(DDR.DDRReport.BITS.Items.Count - 1))
+
                         Dim y As Integer = 44
-                        For Each bit As com.entities.BITS In DDR.DDRReport.BITS.Items
+                        'se modificica el loop para que solo obtenga los dos ultimos.
+
+                        'For Each bit As com.entities.BITS In DDR.DDRReport.BITS.Items
+                        For Each bit As com.entities.BITS In bitstoprint
                             If y <= 45 Then
                                 xlSheet.Cells(y, 3).value = bit.bit_No
                                 xlSheet.Cells(y, 4).value = bit.bit_Size
